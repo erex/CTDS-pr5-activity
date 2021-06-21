@@ -1,0 +1,128 @@
+---
+title: Camera trap distance sampling workshop
+description: |
+  Practical 5: accounting for temporal activity and incorporating uncertainty
+author:
+  - name: Workshop development group 
+    url: https://workshops.distancesampling.org
+    affiliation: CREEM, Univ of St Andrews
+    affiliation_url: https://www.creem.st-andrews.ac.uk
+date: "`r Sys.Date()`"
+output: 
+  distill::distill_article:
+    toc: true
+    toc_depth: 2
+bibliography: howeetal18.bib
+csl: apa.csl
+---
+
+```{r include=FALSE}
+knitr::opts_chunk$set(eval=TRUE, echo=TRUE, message=FALSE, warnings=FALSE)
+do.we.boot <- FALSE
+solution=FALSE
+```
+
+
+#  Narrative regarding activity
+
+
+
+```{r datamunge, eval=solution}
+library(activity)
+duikers <- "C:/Users/erexs/Documents/GitHub/CTDS-pr5-activity/VideoStartTimes_FullDays.txt"
+actdata <- read.table(duikers, header=TRUE)
+# data wrangling to make a datetime value from separate
+# fields for year, month, day, hour and minute
+actdata$date <- paste("2016",
+                      sprintf("%02i", actdata$month), 
+                      sprintf("%02i", actdata$day),
+                      sep="/")
+actdata$time <- paste(sprintf("%02i", actdata$hour),
+                      sprintf("%02i", actdata$minute),
+                      sep=":")
+actdata$datetime <- paste(actdata$date, actdata$time)
+```
+
+
+#  Time of day is circular data
+
+```{r radian, eval=solution}
+# converts time of day to a circular distribution
+#   in this case based on radian fraction of a circle
+#   midday is pi radians, midnight is 2pi radians
+
+actdata$rtime <- gettime(actdata$datetime, "%Y/%m/%d %H:%M")
+```
+
+
+#  Proportion of time animals are active
+
+## Bootstrap data to capture uncertainty in the activitiy estimate
+
+```{r activity, eval=solution}
+result <- fitact(actdata$rtime, sample="data", reps=100)
+plot(result)
+# slot containing point estimate, SE and 95% CI bounds
+activ.mult <- result@act[1]
+activ.se <- result@act[2]
+```
+
+```{r acttable, eval=solution}
+activ.result <- data.frame(activ.mult, activ.se)
+knitr::kable(activ.result, digits=c(3,4))
+```
+
+
+# Make detection function object available
+
+Re-load the model objects created in Practical 2 to be used in conjunction with variance estimation.
+
+```{r reload}
+library(Distance)
+data("DuikerCameraTraps")
+load("C:/Users/erexs/Documents/GitHub/CTDS-pr2-duikerfit/duikermodels.RData")
+```
+
+**OF COURSE, we cannot apply the activity factor, because we only have data for peak activity**
+**There is full data in Dryad, but that did not get made into a dataset that ships in the package**
+**Should the "daytime" Dryad data be loaded in  RStudio/Cloud for analysis by workshop participants?**
+**If we switch data sets, then we need not load the old objects, instead we need to refit and reselect...**
+**PeakDistances.txt in this directory is the full data set; could cheat and simply fit a single model to this data set**
+
+# Bootstrap for variance estimation
+
+To produce a more reliable estimate of the precision of the point estimate, produce bootstrap estimates using `bootdht`. Note, with an Intel i5 generation processor, this call to `bootdht` required ~3hrs of computing; you may desire more bootstrap replicates than provided here. Two issues to note when using `bootdht` with these camera trap data:
+
+-   because of the viewing angle of the camera, we must specify the `sample_fraction` argument just as was done in the call to `dht2`
+-   in @howeetal, estimates of density rather than estimates of abundance are presented. To produce estimates from `bootdht` consistent with @howeetal, we write our own simple summary function to extract density estimates from each bootstrap replicate. This is instead of relying upon the default function `bootdht_Nhat_summarize` provided in the `Distance` package, which produces estimates of abundance rather than density.
+
+```{r, bootstrap, results='hide', eval=solution}
+library(Distance)
+viewangle <- 42 # degrees
+samfrac <- viewangle / 360
+mysummary <- function(ests, fit){
+  return(data.frame(Dhat = ests$individuals$D$Estimate))
+}
+duiker.boot.hr <- bootdht(model=hr0, flatfile=DuikerCameraTraps, resample_transects = TRUE,
+                       nboot=400, summary_fun=mysummary, sample_fraction = samfrac,
+                       convert.units = conversion)
+```
+
+Confidence limits computed via the percentile method of the bootstrap.
+
+```{r bootresult, eval=solution}
+print(summary(duiker.boot.hr))
+```
+
+```{r, fig.width=8, fig.cap="Distribution of density estimates from bootstrap replicates.", eval=solution}
+hist(duiker.boot.hr$Dhat, breaks = 20, 
+     xlab="Estimated density", main="D-hat estimates bootstraps")
+abline(v=quantile(duiker.boot.hr$Dhat, probs = c(0.025,0.975), na.rm=TRUE), lwd=2, lty=3)
+```
+
+Note the confidence limits computed from the bootstrap are somewhat wider than the confidence limits computed via `dht2`.
+
+# Questions
+
+- Questions will be dependent upon what data set used
+
