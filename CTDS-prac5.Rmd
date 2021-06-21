@@ -25,7 +25,7 @@ solution=FALSE
 
 #  Narrative regarding activity
 
-
+*much of the narrative will come from Prac2*
 
 ```{r datamunge, eval=solution}
 library(activity)
