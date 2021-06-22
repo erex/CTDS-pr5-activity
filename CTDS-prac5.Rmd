@@ -23,9 +23,9 @@ solution=FALSE
 ```
 
 
-#  Narrative regarding activity
+# Estimating temporal availability for detection
 
-*much of the narrative will come from Prac2*
+Heat- and motion-sensitive camera traps detect only moving animals within the range of the sensor and the field of view of the camera. Animals are therefore unavailable for detection by camera traps when they are stationary, and when they are above (e.g., semi-arboreal species) or below (e.g., semi-fossorial species) the range of the sensor or the camera, regardless of their distance from the camera in two dimensions. This temporally limited availability for detection must be accounted for to avoid negative bias in estimated densities. When data are abundant, researchers may choose to include only data from times when 100% of the population can be assumed to be active within the vertical range of camera traps @howeetal. However, for rarely-detected species or surveys with lower effort, it might be necessary to include most or all observations of distance. In these situations, survey duration ($T_k$) might be 12- or 24-hours per day, and it becomes necessary to estimate the proportion of time included in $T_k$ when animals were available for detection. Methods for estimating this proportion directly from CT data have been described @rowcliffe_2014, and it can be included in analyses to estimate density @bessone_2020, for example as another multiplier, potentially with an associated standard errors.  This will be the subject of Practical 5.
 
 ```{r datamunge, eval=solution}
 library(activity)
