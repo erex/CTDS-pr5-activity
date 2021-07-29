@@ -18,18 +18,28 @@ csl: apa.csl
 
 ```{r include=FALSE}
 knitr::opts_chunk$set(eval=TRUE, echo=TRUE, message=FALSE, warnings=FALSE)
-do.we.boot <- FALSE
 solution <- TRUE
 ```
 
 
-#  Narrative regarding activity
+# Estimating temporal availability for detection
 
-<to be written, or borrowed from Prac2>
+Heat- and motion-sensitive camera traps detect only moving animals within the range of the sensor and the field of view of the camera. Animals are therefore unavailable for detection by camera traps when they are stationary, and when they are above (e.g., semi-arboreal species) or below (e.g., semi-fossorial species) the range of the sensor or the camera, regardless of their distance from the camera in two dimensions. This temporally limited availability for detection must be accounted for to avoid negative bias in estimated densities. When data are abundant, researchers may choose to include only data from times when 100% of the population can be assumed to be active within the vertical range of camera traps @howeetal. However, for rarely-detected species or surveys with lower effort, it might be necessary to include most or all observations of distance. In these situations, survey duration ($T_k$) might be 12- or 24-hours per day, and it becomes necessary to estimate the proportion of time included in $T_k$ when animals were available for detection. Methods for estimating this proportion directly from CT data have been described @rowcliffe_2014, and it can be included in analyses to estimate density @bessone_2020, for example as another multiplier, potentially with an associated standard errors.  This will be the subject of Practical 5.
+
+## Different data used for this practical
+
+Howe et al. [-@howeetal] analysed data for cameras in C&ocirc;te d'Ivoire that were operating 11.5 hours per day.  They conducted analyses using data in two ways:
+
+- only from the crepuscular times of day (dawn and dusk); that's the analysis you conducted in Practical 2, and
+- detections from the entire 11.5 period each day; the data we will analyse in this practical.
+
+# Data formatting for use in `activity` package
+
+The file containing the start times of video cameras forms the basis of temporal availability calculations.  Data from the camera logs are stored in a text file, `VideoStartTimes_FullDays.txt` and need to be massaged so the data can be analysed by the `activity` package (get Rowecliffe citation)
 
 ```{r datamunge, eval=solution}
 library(activity)
-duikers <- "C:/Users/erexs/Documents/GitHub/CTDS-pr5-activity/VideoStartTimes_FullDays.txt"
+duikers <- "VideoStartTimes_FullDays.txt"
 actdata <- read.table(duikers, header=TRUE)
 # data wrangling to make a datetime value from separate
 # fields for year, month, day, hour and minute
@@ -44,87 +54,179 @@ actdata$datetime <- paste(actdata$date, actdata$time)
 ```
 
 
-#  Time of day is circular data
+#  Functions in the `activity` package
+
+We will employ two functions from the `activity` package.  First, convert the time of day of a camera triggering event into the fraction of the 24hr cycle when the event took place, measured in radians.  In other words, an event occurring at midday is recorded as $\pi$ and an event occurring at midnight is recorded as 2$\pi$.
 
 ```{r radian, eval=solution}
-# converts time of day to a circular distribution
-#   in this case based on radian fraction of a circle
-#   midday is pi radians, midnight is 2pi radians
-
 actdata$rtime <- gettime(actdata$datetime, "%Y/%m/%d %H:%M")
 ```
 
-
-#  Proportion of time animals are active
-
-## Bootstrap data to capture uncertainty in the activitiy estimate
+With the radian conversion of the camera triggering times, the distribution of the triggering events times is smoothed, using a kernel smoother by the function `fitact`.  The function estimates the proportion of time (in a 24hr day) animals were active.  In addition, the triggering time data can be resampled to provide a measure of uncertainty in the point estimate of activity proportion.
 
 ```{r activity, eval=solution}
-result <- fitact(actdata$rtime, sample="data", reps=100)
-plot(result)
-# slot containing point estimate, SE and 95% CI bounds
-activ.mult <- result@act[1]
-activ.se <- result@act[2]
+act_result <- fitact(actdata$rtime, sample="data", reps=100)
 ```
 
-```{r acttable, eval=solution}
-activ.result <- data.frame(activ.mult, activ.se)
-knitr::kable(activ.result, digits=c(3,4))
+A plot of the histogram of triggering times, along with the fitted smooth is provided by a plot function applied to the object returned by `fitact`.
+
+```{r actplot, eval=solution, fig.cap="Fitted smooth to histogram of camera triggering times for Maxwell's duiker data."}
+plot(act_result)
 ```
 
+The value computed by the smooth through the activity histogram can be extracted from the object created by `fitact`.  The extraction reaches into the object to look at the `slot` called `act`.  The uncertainty around the point estimate is derived from resampling that takes place within `fitact`.  The slot will display the point estimates, standard error and confidence interval bounds.
 
-# Make detection function object available
+```{r thenumber, eval=solution}
+print(act_result@act)
+```
 
-Re-load the model objects created in Practical 2 to be used in conjunction with variance estimation.
+Note, this is **not** the value we will need in our subsequent calculations.  Details about this coming shortly.
 
-```{r reload}
+# Detection distances in "Daytime" data set 
+
+The full "daytime" data set, detections record between 0630 and 1800, including detections outside the crepuscular period used in "peak" data set.  We read in the file containing the daytime detections and reorganise it for detection function fitting.
+
+```{r organise}
+daytime <- read.csv("DaytimeDistances.txt", header=TRUE, sep="\t")
+daytime <- subset(daytime, select=-c(utm.e, utm.n))
+daytime <- daytime[, c("Region.Label", "Area", "multiplier",
+                       "Sample.Label", "Effort", "distance")]
+```
+
+# Detection function fitting to the "daytime" data
+
+Before fitting a detection function to these data, there are a few constants that will be useful in the subsequent analysis steps.  We will define them here.
+
+```{r utility, eval=solution}
 library(Distance)
-data("DuikerCameraTraps")
-load("C:/Users/erexs/Documents/GitHub/CTDS-pr2-duikerfit/duikermodels.RData")
+viewangle <- 42
+field.of.view <- viewangle / 360
+camera.operation.per.day <- 11.5
+conversion <- convert_units("meter", NULL, "square kilometer")
+trunc.list <- list(right=15, left=2)
+mybreaks <- c(seq(2,8,1), 10, 12, 15)
 ```
 
-**OF COURSE, we cannot apply the activity factor, because we only have data for peak activity**
-**There is full data in Dryad, but that did not get made into a dataset that ships in the package**
-**Should the "daytime" Dryad data be loaded in  RStudio/Cloud for analysis by workshop participants?**
-**If we switch data sets, then we need not load the old objects, instead we need to refit and reselect...**
-**PeakDistances.txt in this directory is the full data set; could cheat and simply fit a single model to this data set**
+`viewangle` is the field of view of the camera lens (in degrees), `camera.operation.per.day` is number of hours cameras were in operation each day, `conversion` are units of measure of quantities in the "daytime" data file, `trunc.list` are right and left truncation values for the detection function modelling and `mybreaks` contains cutpoints for distance bins.
+
+We should perform a complete analysis, fitting a suite of detection function models to the "daytime" data set.  However, this would repeat much of the work you performed in Practical 2, so we will simply fit the hazard rate model without adjustments.
+
+```{r dayhr0, eval=solution}
+daytime.hr0 <- ds(daytime, transect = "point", key="hr", adjustment = NULL,
+                  cutpoints = mybreaks, truncation = trunc.list,
+                  convert.units=conversion)
+plot(daytime.hr0, pdf=TRUE)
+```
+
+# Adjustments to detection function to estimate duiker density
+
+Simply fitting a detection function to the detection distances and incorporating the encounter rates is not sufficient to estimate duiker density.  A simplifed analysis assumes:
+
+- animals are equally available at all times the cameras are active and
+- cameras make detections in a $360^\circ$ around the camera.
+
+Neither of these are true, so adjustments must be made, using information provided about the camera and the daily duration of operation.
+
+## Adjustment for temporal availability
+
+We use the temporal availability information to create a *multiplier*.  Our multiplier must be defined as
+> proportion of the *camera operation time* animals were available to be detected
+
+This is not equivalent to the value produced by the `fitact` function; that value is the proportion of *24hr* animals were available to be detected.  The availability multiplier must be adjusted based on the daily camera operation period.  Uncertainty in this proportion is also included in our computations.
+
+The point estimate and standard error are pulled from the `fitact` object, adjusted for daily camera operation time and placed into a data frame named `creation` in a named list, specifically in the fashion shown.
+
+```{r avmultiplier, eval=solution}
+prop.camera.time <- camera.operation.per.day / 24
+avail <- list(creation=data.frame(rate = act_result@act[1]/prop.camera.time,
+                                  SE   = act_result@act[2]/prop.camera.time))
+```
+
+## Adjustment for viewing angle
+
+This second adjustment is much simpler as it is not a computed quantity and is known with certainty.  The function we are about to use has an argument `sampling_fraction`, which exactly suits the purpose of partial field of view for each camera.
+
+# `dht2` for density estimation
+
+Combining these adjustments with the computations associated with detection functions and encounter rates, calls for the use of a new function in the Distance package: `dht2`.  Arguments to this function are considerable because of all the things this function must do.
+
+- ddf: the detection function model
+- flatfile: the original data frame
+- strat_formula: in case this is a stratified survey design
+- convert_units: distance measures in the original data
+- sample_fraction: for the camera field of view
+- multipliers: availability named list
+
+```{r dht2, eval=solution}
+daytime_dht2 <- dht2(ddf=daytime.hr0, flatfile=daytime, strat_formula=~1,
+                    convert_units=conversion, sample_fraction=field.of.view, 
+                    multipliers=avail)
+print(daytime_dht2, report="density")
+```
+
 
 # Bootstrap for variance estimation
 
-To produce a more reliable estimate of the precision of the point estimate, produce bootstrap estimates using `bootdht`. Note, with an Intel i5 generation processor, this call to `bootdht` required ~3hrs of computing; you may desire more bootstrap replicates than provided here. Two issues to note when using `bootdht` with these camera trap data:
+To produce a more reliable estimate of the precision of the point estimate, produce bootstrap estimates using `bootdht`. The user needs to create a function and another named list to facilitate use of the bootstrap: a summary function to extract information from each replicate and a multiplier list describing how temporal availability is being derived.
 
--   because of the viewing angle of the camera, we must specify the `sample_fraction` argument just as was done in the call to `dht2`
--   in @howeetal, estimates of density rather than estimates of abundance are presented. To produce estimates from `bootdht` consistent with @howeetal, we write our own simple summary function to extract density estimates from each bootstrap replicate. This is instead of relying upon the default function `bootdht_Nhat_summarize` provided in the `Distance` package, which produces estimates of abundance rather than density.
+## Summary function
+
+As constructed, `mysummary` will keep the density estimate produced by each bootstrap replicate and the stratum (if any) to which the estimate pertains.
+
+```{r mysummary}
+mysummary <- function(ests, fit){
+  return(data.frame(Label = ests$individuals$D$Label,
+                    Dhat = ests$individuals$D$Estimate))
+}
+```
+
+## Multiplier function
+
+This rather complex list makes use of `make_activity_fn` that exists in the `Distance` package used to call the `fitact` function from the `activity` package.  For the user, your responsibility is to provide three arguments to this function:
+
+- vector containing the detection times in radians,
+- the manner in which precision of the temporal availability estimate is produced and
+- the number of hours per day the cameras are in operation
+
+```{r multifunc, eval=solution}
+mult <- list(availability= make_activity_fn(actdata$rtime, sample="data",
+                                            detector_daily_duration=camera.operation.per.day))
+```
+
+## Remaining arguments to `bootdht`
+
+Just as with `dht2` there are arguments for the `model`, `flatfile`,  `sample_fraction`, `convert.units` and `multipliers` (although for `bootdht` `multipliers` uses a function rather than a single value).  The only novel arguments to `dht2` are `resample_transects` indicating camera stations are to be resampled with replacement, `nboot` for the number of bootstrap replicates and `cores` which can take advantage of multiple cores in your computer to speed computation.
 
 ```{r, bootstrap, results='hide', eval=solution}
-library(Distance)
-viewangle <- 42 # degrees
-samfrac <- viewangle / 360
-conversion <- convert_units("meter", NULL, "square kilometer")
-mysummary <- function(ests, fit){
-  return(data.frame(Dhat = ests$individuals$D$Estimate))
-}
-duiker.boot.hr <- bootdht(model=hr0, flatfile=DuikerCameraTraps, resample_transects = TRUE,
-                       nboot=40, summary_fun=mysummary, sample_fraction = samfrac,
-                       convert.units = conversion)
+daytime.boot.hr <- bootdht(model=daytime.hr0, flatfile=daytime,
+                          resample_transects = TRUE, nboot=700, cores = 3,
+                          summary_fun=mysummary, sample_fraction = field.of.view,
+                          convert.units = conversion, multipliers=mult)
 ```
 
 Confidence limits computed via the percentile method of the bootstrap.
 
 ```{r bootresult, eval=solution}
-print(summary(duiker.boot.hr))
+print(summary(daytime.boot.hr))
 ```
 
 ```{r, fig.width=8, fig.cap="Distribution of density estimates from bootstrap replicates.", eval=solution}
-hist(duiker.boot.hr$Dhat, breaks = 20, 
+hist(daytime.boot.hr$Dhat, breaks = 20, 
      xlab="Estimated density", main="D-hat estimates bootstraps")
-abline(v=quantile(duiker.boot.hr$Dhat, probs = c(0.025,0.975), na.rm=TRUE), lwd=2, lty=3)
+abline(v=quantile(daytime.boot.hr$Dhat, probs = c(0.025,0.975), na.rm=TRUE), lwd=2, lty=3)
 ```
-
-Note the confidence limits computed from the bootstrap are somewhat wider than the confidence limits computed via `dht2`.
 
 # Questions
 
-- Questions will be dependent upon what data set used
-  - <p style="color: blue; font-size: 110%; font-style: italic;">Answer</p>
+Comment upon the following comparisons
 
+- Point estimate of density from `dht2` with median of the bootstrap replicate distribution,
+  -<p style="color: blue; font-size: 110%; font-style: italic;">Reasonably good agreement between estimate computed by `dht2` and the median of the bootstrap distribution</p>
+- Mean and median of the bootstrap replicate distribution,
+  -<p style="color: blue; font-size: 110%; font-style: italic;">Median is considerably larger than the mean of the distribution because the distribution is skewed right (long right tail in the distribution</p>
+- Width of the 95% confidence interval from `dht2` and from `bootdht`
+  -<p style="color: blue; font-size: 110%; font-style: italic;">The confidence interval width is wider when computed using the bootstrap than when computed analytically using `dht2`.  This is particularly notable with the upper confidence bound that is larger with the bootstrap because of the long right tail.</p>
+
+- Discuss the magnitude of components (detection function, encounter rate and multiplier) of the uncertainty in the density estimate as shown in `dht2` output.
+  - Are there any lessons in those components for the design of future duiker camera trap surveys in the region?
+    -<p style="color: blue; font-size: 110%; font-style: italic;">A minute amount of uncertainty in the duiker density estimate comes from the detection function modelling.  Much much more uncertainty comes from the large variability in encounter rates between camera stations, with a small amount contributed by uncertainty in the temporal availability estimate.  For future studies, the objective should be to reduce the encounter rate variability, or improve the estimate of encounter rate variability by increasing the number of camera stations.  Also perhaps worth considering a stratified survey design, grouping together stations with high encounter rates and stations with low encounter rates.</p>
