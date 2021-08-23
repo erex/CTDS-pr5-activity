@@ -35,7 +35,7 @@ Howe et al. [-@howeetal] analysed data for cameras in C&ocirc;te d'Ivoire that w
 
 # Data formatting for use in `activity` package
 
-The file containing the start times of video cameras forms the basis of temporal availability calculations.  Data from the camera logs are stored in a text file, `VideoStartTimes_FullDays.txt` and need to be massaged so the data can be analysed by the `activity` package (get Rowecliffe citation)
+The file containing the start times of video cameras forms the basis of temporal availability calculations.  Data from the camera logs are stored in a text file, `VideoStartTimes_FullDays.txt` and need to be massaged so the data can be analysed by the `activity` package [@activity_pkg].
 
 ```{r datamunge, eval=solution}
 library(activity)
@@ -199,7 +199,7 @@ Just as with `dht2` there are arguments for the `model`, `flatfile`,  `sample_fr
 
 ```{r, bootstrap, results='hide', eval=solution}
 daytime.boot.hr <- bootdht(model=daytime.hr0, flatfile=daytime,
-                          resample_transects = TRUE, nboot=700, cores = 3,
+                          resample_transects = TRUE, nboot=200, cores = 3,
                           summary_fun=mysummary, sample_fraction = field.of.view,
                           convert.units = conversion, multipliers=mult)
 ```
