@@ -35,11 +35,11 @@ Howe et al. [-@howeetal] analysed data for cameras in C&ocirc;te d'Ivoire that w
 
 # Data formatting for use in `activity` package
 
-The file containing the start times of video cameras forms the basis of temporal availability calculations.  Data from the camera logs are stored in a text file, `VideoStartTimes_FullDays.txt` and need to be massaged so the data can be analysed by the `activity` package [@activity_pkg].
+The file containing the start times of video cameras forms the basis of temporal availability calculations.  Data from the camera logs are stored in a text file, `VideoStartTimes_Daytime.txt` and need to be massaged so the data can be analysed by the `activity` package [@activity_pkg].
 
 ```{r datamunge, eval=solution}
 library(activity)
-duikers <- "VideoStartTimes_FullDays.txt"
+duikers <- "VideoStartTimes_Daytime.txt"
 actdata <- read.table(duikers, header=TRUE)
 # data wrangling to make a datetime value from separate
 # fields for year, month, day, hour and minute
@@ -199,7 +199,7 @@ Just as with `dht2` there are arguments for the `model`, `flatfile`,  `sample_fr
 
 ```{r, bootstrap, results='hide', eval=solution}
 daytime.boot.hr <- bootdht(model=daytime.hr0, flatfile=daytime,
-                          resample_transects = TRUE, nboot=200, cores = 3,
+                          resample_transects = TRUE, nboot=500, cores = 11,
                           summary_fun=mysummary, sample_fraction = field.of.view,
                           convert.units = conversion, multipliers=mult)
 ```
@@ -223,7 +223,7 @@ Comment upon the following comparisons
 - Point estimate of density from `dht2` with median of the bootstrap replicate distribution,
   -<p style="color: blue; font-size: 110%; font-style: italic;">Reasonably good agreement between estimate computed by `dht2` and the median of the bootstrap distribution</p>
 - Mean and median of the bootstrap replicate distribution,
-  -<p style="color: blue; font-size: 110%; font-style: italic;">Median is considerably larger than the mean of the distribution because the distribution is skewed right (long right tail in the distribution</p>
+  -<p style="color: blue; font-size: 110%; font-style: italic;">Mean is larger than the median of the distribution because the distribution is skewed right (long right tail in the distribution)</p>
 - Width of the 95% confidence interval from `dht2` and from `bootdht`
   -<p style="color: blue; font-size: 110%; font-style: italic;">The confidence interval width is wider when computed using the bootstrap than when computed analytically using `dht2`.  This is particularly notable with the upper confidence bound that is larger with the bootstrap because of the long right tail.</p>
 
