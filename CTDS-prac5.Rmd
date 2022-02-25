@@ -80,7 +80,7 @@ The value computed by the smooth through the activity histogram can be extracted
 print(act_result@act)
 ```
 
-Note, this is **not** the value we will need in our subsequent calculations.  Details about this coming shortly.
+Note, this is **not** the value we will need in our final calculations.  Details about this coming shortly.
 
 # Detection distances in "Daytime" data set 
 
@@ -130,6 +130,7 @@ Neither of these are true, so adjustments must be made, using information provid
 ## Adjustment for temporal availability
 
 We use the temporal availability information to create a *multiplier*.  Our multiplier must be defined as
+
 > proportion of the *camera operation time* animals were available to be detected
 
 This is not equivalent to the value produced by the `fitact` function; that value is the proportion of *24hr* animals were available to be detected.  The availability multiplier must be adjusted based on the daily camera operation period.  Uncertainty in this proportion is also included in our computations.

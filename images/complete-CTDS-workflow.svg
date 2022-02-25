@@ -1,0 +1,631 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="913.5417px" preserveAspectRatio="none" style="width:1725px;height:913px;background:#00000000;" version="1.1" viewBox="0 0 1725 913" width="1725px" zoomAndPan="magnify"><defs/><g><!--MD5=[0ad0d13f343b5a63ac787c4b5fe1d021]
+entity prior--><svg x="16.6667" y="188.5417"><defs><filter height="300%" id="fglliqraqzt1w" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="2.0833333333333335"/><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/><feOffset dx="4.166666666666667" dy="4.166666666666667" in="blurOut2" result="blurOut3"/><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/></filter><linearGradient id="gglliqraqzt1w0" x1="50%" x2="50%" y1="0%" y2="100%"><stop offset="0%" stop-color="#4DABF5"/><stop offset="100%" stop-color="#2196F3"/></linearGradient><linearGradient id="gglliqraqzt1w1" x1="50%" x2="50%" y1="0%" y2="100%"><stop offset="0%" stop-color="#FFFFFF"/><stop offset="100%" stop-color="#FFFFFF"/></linearGradient></defs><g transform="scale(1.0417,1.0417)" ><rect fill="#00000000" style="width:442px;height:522px;background:#00000000;" /> <rect filter="url(#fglliqraqzt1w)" height="493.8009" rx="4.1667" ry="4.1667" style="stroke:#2196F3;stroke-width:2.0833333333333335;fill:none;" width="413.5417" x="11.4583" y="11.4583"/><path d="M203.125,11.4583 L203.125,39.5508 L192.7083,49.9674 L11.4583,49.9674 " fill="none" style="stroke:#2196F3;stroke-width:2.0833333333333335;"/><text fill="#2196F3" font-family="Verdana" font-size="12.5" lengthAdjust="spacing" textLength="160.4167" x="25" y="34.5194">Before Distance software</text><rect fill="url(#gglliqraqzt1w0)" filter="url(#fglliqraqzt1w)" height="56.2174" rx="13.0208" ry="13.0208" style="stroke:#2196F3;stroke-width:1.5625;" width="155.2083" x="117.9688" y="60.3841"/><text fill="#FFFFFF" font-family="Verdana" font-size="12.5" lengthAdjust="spacing" textLength="113.5417" x="138.8021" y="92.8202">image processing</text><polygon fill="url(#gglliqraqzt1w1)" filter="url(#fglliqraqzt1w)" points="135.6771,150.2299,255.4688,150.2299,267.9688,167.922,255.4688,185.614,135.6771,185.614,123.1771,167.922,135.6771,150.2299" style="stroke:#CCCCCC;stroke-width:1.5625;"/><text fill="#222222" font-family="Verdana" font-size="12.5" lengthAdjust="spacing" textLength="98.9583" x="146.0938" y="172.2493">diurnal filtering?</text><text fill="#222222" font-family="Verdana" font-size="12.5" lengthAdjust="spacing" textLength="79.1667" x="33.5938" y="154.5573">peak activity</text><text fill="#222222" font-family="Verdana" font-size="12.5" lengthAdjust="spacing" textLength="64.5833" x="278.3854" y="140.0065">all camera</text><text fill="#222222" font-family="Verdana" font-size="12.5" lengthAdjust="spacing" textLength="35.4167" x="278.3854" y="154.5573">hours</text><rect fill="url(#gglliqraqzt1w0)" filter="url(#fglliqraqzt1w)" height="70.7682" rx="13.0208" ry="13.0208" style="stroke:#2196F3;stroke-width:1.5625;" width="138.5417" x="23.9583" y="196.0307"/><text fill="#FFFFFF" font-family="Verdana" font-size="12.5" lengthAdjust="spacing" textLength="96.875" x="44.7917" y="228.4668">only detections</text><text fill="#FFFFFF" font-family="Verdana" font-size="12.5" lengthAdjust="spacing" textLength="79.1667" x="44.7917" y="243.0176">peak activity</text><rect fill="url(#gglliqraqzt1w0)" filter="url(#fglliqraqzt1w)" height="56.2174" rx="13.0208" ry="13.0208" style="stroke:#2196F3;stroke-width:1.5625;" width="229.1667" x="183.3333" y="196.0307"/><text fill="#FFFFFF" font-family="Verdana" font-size="12.5" lengthAdjust="spacing" textLength="187.5" x="204.1667" y="228.4668">point and SE activity multiplier</text><rect fill="url(#gglliqraqzt1w0)" filter="url(#fglliqraqzt1w)" height="56.2174" rx="13.0208" ry="13.0208" style="stroke:#2196F3;stroke-width:1.5625;" width="169.7917" x="213.0208" y="359.4584"/><text fill="#FFFFFF" font-family="Verdana" font-size="12.5" lengthAdjust="spacing" textLength="128.125" x="233.8542" y="391.8945">bootstrap replicates</text><polygon fill="url(#gglliqraqzt1w1)" filter="url(#fglliqraqzt1w)" points="250,287.6322,345.8333,287.6322,358.3333,305.3243,345.8333,323.0164,250,323.0164,237.5,305.3243,250,287.6322" style="stroke:#CCCCCC;stroke-width:1.5625;"/><text fill="#222222" font-family="Verdana" font-size="12.5" lengthAdjust="spacing" textLength="22.9167" x="312.5" y="345.0358">yes</text><text fill="#222222" font-family="Verdana" font-size="12.5" lengthAdjust="spacing" textLength="75" x="260.4167" y="309.6517">bootstraps?</text><polygon fill="url(#gglliqraqzt1w1)" filter="url(#fglliqraqzt1w)" points="297.9167,436.5092,310.4167,449.0092,297.9167,461.5092,285.4167,449.0092,297.9167,436.5092" style="stroke:#CCCCCC;stroke-width:1.5625;"/><polygon fill="url(#gglliqraqzt1w1)" filter="url(#fglliqraqzt1w)" points="195.5729,467.7592,208.0729,480.2592,195.5729,492.7592,183.0729,480.2592,195.5729,467.7592" style="stroke:#CCCCCC;stroke-width:1.5625;"/><line style="stroke:#2196F3;stroke-width:1.5625;" x1="297.9167" x2="297.9167" y1="323.0164" y2="359.4584"/><polygon fill="#2196F3" points="293.75,349.0417,297.9167,359.4584,302.0833,349.0417,297.9167,353.2084" style="stroke:#2196F3;stroke-width:1.0416666666666667;"/><line style="stroke:#2196F3;stroke-width:1.5625;" x1="358.3333" x2="393.2292" y1="305.3243" y2="305.3243"/><polygon fill="#2196F3" points="389.0625,384.9711,393.2292,395.3878,397.3958,384.9711,393.2292,389.1378" style="stroke:#2196F3;stroke-width:1.5625;"/><line style="stroke:#2196F3;stroke-width:1.5625;" x1="393.2292" x2="393.2292" y1="305.3243" y2="449.0092"/><line style="stroke:#2196F3;stroke-width:1.5625;" x1="393.2292" x2="310.4167" y1="449.0092" y2="449.0092"/><polygon fill="#2196F3" points="320.8333,444.8425,310.4167,449.0092,320.8333,453.1759,316.6667,449.0092" style="stroke:#2196F3;stroke-width:1.0416666666666667;"/><line style="stroke:#2196F3;stroke-width:1.5625;" x1="297.9167" x2="297.9167" y1="415.6759" y2="436.5092"/><polygon fill="#2196F3" points="293.75,426.0925,297.9167,436.5092,302.0833,426.0925,297.9167,430.2592" style="stroke:#2196F3;stroke-width:1.0416666666666667;"/><line style="stroke:#2196F3;stroke-width:1.5625;" x1="297.9167" x2="297.9167" y1="252.2481" y2="287.6322"/><polygon fill="#2196F3" points="293.75,277.2156,297.9167,287.6322,302.0833,277.2156,297.9167,281.3822" style="stroke:#2196F3;stroke-width:1.0416666666666667;"/><line style="stroke:#2196F3;stroke-width:1.5625;" x1="123.1771" x2="93.2292" y1="167.922" y2="167.922"/><line style="stroke:#2196F3;stroke-width:1.5625;" x1="93.2292" x2="93.2292" y1="167.922" y2="196.0307"/><polygon fill="#2196F3" points="89.0625,185.614,93.2292,196.0307,97.3958,185.614,93.2292,189.7807" style="stroke:#2196F3;stroke-width:1.0416666666666667;"/><line style="stroke:#2196F3;stroke-width:1.5625;" x1="267.9688" x2="297.9167" y1="167.922" y2="167.922"/><line style="stroke:#2196F3;stroke-width:1.5625;" x1="297.9167" x2="297.9167" y1="167.922" y2="196.0307"/><polygon fill="#2196F3" points="293.75,185.614,297.9167,196.0307,302.0833,185.614,297.9167,189.7807" style="stroke:#2196F3;stroke-width:1.0416666666666667;"/><line style="stroke:#2196F3;stroke-width:1.5625;" x1="93.2292" x2="93.2292" y1="266.7989" y2="480.2592"/><line style="stroke:#2196F3;stroke-width:1.5625;" x1="93.2292" x2="183.0729" y1="480.2592" y2="480.2592"/><polygon fill="#2196F3" points="172.6563,476.0925,183.0729,480.2592,172.6563,484.4259,176.8229,480.2592" style="stroke:#2196F3;stroke-width:1.0416666666666667;"/><line style="stroke:#2196F3;stroke-width:1.5625;" x1="297.9167" x2="297.9167" y1="461.5092" y2="480.2592"/><line style="stroke:#2196F3;stroke-width:1.5625;" x1="297.9167" x2="208.0729" y1="480.2592" y2="480.2592"/><polygon fill="#2196F3" points="218.4896,476.0925,208.0729,480.2592,218.4896,484.4259,214.3229,480.2592" style="stroke:#2196F3;stroke-width:1.0416666666666667;"/><line style="stroke:#2196F3;stroke-width:1.5625;" x1="195.5729" x2="195.5729" y1="116.6016" y2="150.2299"/><polygon fill="#2196F3" points="191.4063,139.8132,195.5729,150.2299,199.7396,139.8132,195.5729,143.9799" style="stroke:#2196F3;stroke-width:1.0416666666666667;"/><!--MD5=[0639148164d8590ab46fdebff939d4a5]
+@startuml
+partition "Before Distance software" {
+:image processing;
+if (diurnal filtering?) then (peak activity)
+	:only detections\npeak activity;
+else (all camera\nhours)
+	:point and SE activity multiplier;
+	if (bootstraps?) then (yes)
+	  :bootstrap replicates;
+	endif  
+endif
+}
+@enduml
+
+PlantUML version 1.2022.2beta1(Unknown compile time)
+(GPL source distribution)
+Java Runtime: Java(TM) SE Runtime Environment
+JVM: Java HotSpot(TM) 64-Bit Server VM
+Default Encoding: UTF-8
+Language: en
+Country: US
+--></g></svg><!--MD5=[677efdeb958d69308c1ff3d164f703eb]
+entity detection--><svg x="580.2083" y="16.6667"><defs><filter height="300%" id="f1bof8ssacg84x" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="2.0833333333333335"/><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/><feOffset dx="4.166666666666667" dy="4.166666666666667" in="blurOut2" result="blurOut3"/><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/></filter><linearGradient id="g1bof8ssacg84x0" x1="50%" x2="50%" y1="0%" y2="100%"><stop offset="0%" stop-color="#4DABF5"/><stop offset="100%" stop-color="#2196F3"/></linearGradient><linearGradient id="g1bof8ssacg84x1" x1="50%" x2="50%" y1="0%" y2="100%"><stop offset="0%" stop-color="#B052C0"/><stop offset="100%" stop-color="#9C27B0"/></linearGradient></defs><g transform="scale(1.0417,1.0417)" ><rect fill="#00000000" style="width:529px;height:852px;background:#00000000;" /> <rect filter="url(#f1bof8ssacg84x)" height="823.4212" rx="4.1667" ry="4.1667" style="stroke:#2196F3;stroke-width:2.0833333333333335;fill:none;" width="500" x="11.4583" y="11.4583"/><path d="M156.25,11.4583 L156.25,39.5508 L145.8333,49.9674 L11.4583,49.9674 " fill="none" style="stroke:#2196F3;stroke-width:2.0833333333333335;"/><text fill="#2196F3" font-family="Verdana" font-size="12.5" lengthAdjust="spacing" textLength="113.5417" x="25" y="34.5194">Detection function</text><rect fill="url(#g1bof8ssacg84x0)" filter="url(#f1bof8ssacg84x)" height="56.2174" rx="13.0208" ry="13.0208" style="stroke:#2196F3;stroke-width:1.5625;" width="167.7083" x="310.9375" y="60.3841"/><text fill="#FFFFFF" font-family="Verdana" font-size="12.5" lengthAdjust="spacing" textLength="126.0417" x="331.7708" y="92.8202">Exploratory analysis</text><rect fill="url(#g1bof8ssacg84x0)" filter="url(#f1bof8ssacg84x)" height="70.7682" rx="13.0208" ry="13.0208" style="stroke:#2196F3;stroke-width:1.5625;" width="113.5417" x="338.0208" y="137.4349"/><text fill="#FFFFFF" font-family="Verdana" font-size="12.5" lengthAdjust="spacing" textLength="71.875" x="358.8542" y="169.871">binning and</text><text fill="#FFFFFF" font-family="Verdana" font-size="12.5" lengthAdjust="spacing" textLength="61.4583" x="358.8542" y="184.4218">truncation</text><path d="M21.875,234.2448 L21.875,280.0456 A0,0 0 0 0 21.875,280.0456 L267.7083,280.0456 A0,0 0 0 0 267.7083,280.0456 L267.7083,261.3118 L288.5417,257.1452 L267.7083,252.9785 L267.7083,244.6615 L257.2917,234.2448 L21.875,234.2448 A0,0 0 0 0 21.875,234.2448 " fill="url(#g1bof8ssacg84x1)" filter="url(#f1bof8ssacg84x)" style="stroke:#9C27B0;stroke-width:1.0416666666666667;"/><path d="M257.2917,234.2448 L257.2917,244.6615 L267.7083,244.6615 L257.2917,234.2448 " fill="url(#g1bof8ssacg84x1)" style="stroke:#9C27B0;stroke-width:1.0416666666666667;"/><text fill="#FFFFFF" font-family="Verdana" font-size="12.5" lengthAdjust="spacing" textLength="203.125" x="38.5417" y="261.4726">QAIC, c-hat, GOF Chi2/df, P, P CV</text><rect fill="url(#g1bof8ssacg84x0)" filter="url(#f1bof8ssacg84x)" height="56.2174" rx="13.0208" ry="13.0208" style="stroke:#2196F3;stroke-width:1.5625;" width="212.5" x="288.5417" y="229.0365"/><text fill="#FFFFFF" font-family="Verdana" font-size="12.5" lengthAdjust="spacing" textLength="170.8333" x="309.375" y="261.4726">customise Results Browser</text><path d="M131.25,311.2956 L131.25,357.0964 A0,0 0 0 0 131.25,357.0964 L288.5417,357.0964 A0,0 0 0 0 288.5417,357.0964 L288.5417,338.3626 L309.375,334.196 L288.5417,330.0293 L288.5417,321.7122 L278.125,311.2956 L131.25,311.2956 A0,0 0 0 0 131.25,311.2956 " fill="url(#g1bof8ssacg84x1)" filter="url(#f1bof8ssacg84x)" style="stroke:#9C27B0;stroke-width:1.0416666666666667;"/><path d="M278.125,311.2956 L278.125,321.7122 L288.5417,321.7122 L278.125,311.2956 " fill="url(#g1bof8ssacg84x1)" style="stroke:#9C27B0;stroke-width:1.0416666666666667;"/><text fill="#FFFFFF" font-family="Verdana" font-size="12.5" lengthAdjust="spacing" textLength="114.5833" x="147.9167" y="338.5234">Max 3 parameters</text><rect fill="url(#g1bof8ssacg84x0)" filter="url(#f1bof8ssacg84x)" height="56.2174" rx="13.0208" ry="13.0208" style="stroke:#2196F3;stroke-width:1.5625;" width="170.8333" x="309.375" y="306.0872"/><text fill="#FFFFFF" font-family="Verdana" font-size="12.5" lengthAdjust="spacing" textLength="129.1667" x="330.2083" y="338.5234">candidate model set</text><rect fill="url(#g1bof8ssacg84x0)" filter="url(#f1bof8ssacg84x)" height="70.7682" rx="13.0208" ry="13.0208" style="stroke:#2196F3;stroke-width:1.5625;" width="146.875" x="321.3542" y="383.138"/><text fill="#FFFFFF" font-family="Verdana" font-size="12.5" lengthAdjust="spacing" textLength="105.2083" x="342.1875" y="415.5741">fit most complex</text><text fill="#FFFFFF" font-family="Verdana" font-size="12.5" lengthAdjust="spacing" textLength="79.1667" x="342.1875" y="430.1249">for each key</text><rect fill="url(#g1bof8ssacg84x0)" filter="url(#f1bof8ssacg84x)" height="70.7682" rx="13.0208" ry="13.0208" style="stroke:#2196F3;stroke-width:1.5625;" width="163.5417" x="313.0208" y="474.7396"/><text fill="#FFFFFF" font-family="Verdana" font-size="12.5" lengthAdjust="spacing" textLength="121.875" x="333.8542" y="507.1757">record GOF Chi2/df</text><text fill="#FFFFFF" font-family="Verdana" font-size="12.5" lengthAdjust="spacing" textLength="70.8333" x="333.8542" y="521.7265">of complex</text><path d="M144.7917,564.2741 L144.7917,639.1764 A0,0 0 0 0 144.7917,639.1764 L296.875,639.1764 A0,0 0 0 0 296.875,639.1764 L296.875,605.8919 L317.7083,601.7253 L296.875,597.5586 L296.875,574.6908 L286.4583,564.2741 L144.7917,564.2741 A0,0 0 0 0 144.7917,564.2741 " fill="url(#g1bof8ssacg84x1)" filter="url(#f1bof8ssacg84x)" style="stroke:#9C27B0;stroke-width:1.0416666666666667;"/><path d="M286.4583,564.2741 L286.4583,574.6908 L296.875,574.6908 L286.4583,564.2741 " fill="url(#g1bof8ssacg84x1)" style="stroke:#9C27B0;stroke-width:1.0416666666666667;"/><text fill="#FFFFFF" font-family="Verdana" font-size="12.5" lengthAdjust="spacing" textLength="109.375" x="161.4583" y="591.5019">input GOF Chi2/df</text><text fill="#FFFFFF" font-family="Verdana" font-size="12.5" lengthAdjust="spacing" textLength="79.1667" x="161.4583" y="606.0527">in all models</text><text fill="#FFFFFF" font-family="Verdana" font-size="12.5" lengthAdjust="spacing" textLength="90.625" x="161.4583" y="620.6034">with same key</text><rect fill="url(#g1bof8ssacg84x0)" filter="url(#f1bof8ssacg84x)" height="70.7682" rx="13.0208" ry="13.0208" style="stroke:#2196F3;stroke-width:1.5625;" width="154.1667" x="317.7083" y="566.3411"/><text fill="#FFFFFF" font-family="Verdana" font-size="12.5" lengthAdjust="spacing" textLength="29.1667" x="338.5417" y="598.7773">fit all</text><text fill="#FFFFFF" font-family="Verdana" font-size="12.5" lengthAdjust="spacing" textLength="112.5" x="338.5417" y="613.328">candidate models</text><rect fill="url(#g1bof8ssacg84x0)" filter="url(#f1bof8ssacg84x)" height="70.7682" rx="13.0208" ry="13.0208" style="stroke:#2196F3;stroke-width:1.5625;" width="159.375" x="315.1042" y="660.0098"/><text fill="#FFFFFF" font-family="Verdana" font-size="12.5" lengthAdjust="spacing" textLength="117.7083" x="335.9375" y="692.4459">choose key model</text><text fill="#FFFFFF" font-family="Verdana" font-size="12.5" lengthAdjust="spacing" textLength="115.625" x="335.9375" y="706.9967">with smallest QAIC</text><path d="M69.7917,764.0951 L69.7917,809.8958 A0,0 0 0 0 69.7917,809.8958 L273.9583,809.8958 A0,0 0 0 0 273.9583,809.8958 L273.9583,791.1621 L294.7917,786.9954 L273.9583,782.8288 L273.9583,774.5117 L263.5417,764.0951 L69.7917,764.0951 A0,0 0 0 0 69.7917,764.0951 " fill="url(#g1bof8ssacg84x1)" filter="url(#f1bof8ssacg84x)" style="stroke:#9C27B0;stroke-width:1.0416666666666667;"/><path d="M263.5417,764.0951 L263.5417,774.5117 L273.9583,774.5117 L263.5417,764.0951 " fill="url(#g1bof8ssacg84x1)" style="stroke:#9C27B0;stroke-width:1.0416666666666667;"/><text fill="#FFFFFF" font-family="Verdana" font-size="12.5" lengthAdjust="spacing" textLength="161.4583" x="86.4583" y="791.3228">use GOF Chi2/df to select</text><rect fill="url(#g1bof8ssacg84x0)" filter="url(#f1bof8ssacg84x)" height="70.7682" rx="13.0208" ry="13.0208" style="stroke:#2196F3;stroke-width:1.5625;" width="200" x="294.7917" y="751.6113"/><text fill="#FFFFFF" font-family="Verdana" font-size="12.5" lengthAdjust="spacing" textLength="158.3333" x="315.625" y="784.0474">compare winning models</text><text fill="#FFFFFF" font-family="Verdana" font-size="12.5" lengthAdjust="spacing" textLength="81.25" x="315.625" y="798.5982">from all keys</text><line style="stroke:#2196F3;stroke-width:1.5625;" x1="394.7917" x2="394.7917" y1="116.6016" y2="137.4349"/><polygon fill="#2196F3" points="390.625,127.0182,394.7917,137.4349,398.9583,127.0182,394.7917,131.1849" style="stroke:#2196F3;stroke-width:1.0416666666666667;"/><line style="stroke:#2196F3;stroke-width:1.5625;" x1="394.7917" x2="394.7917" y1="208.2031" y2="229.0365"/><polygon fill="#2196F3" points="390.625,218.6198,394.7917,229.0365,398.9583,218.6198,394.7917,222.7865" style="stroke:#2196F3;stroke-width:1.0416666666666667;"/><line style="stroke:#2196F3;stroke-width:1.5625;" x1="394.7917" x2="394.7917" y1="285.2539" y2="306.0872"/><polygon fill="#2196F3" points="390.625,295.6706,394.7917,306.0872,398.9583,295.6706,394.7917,299.8372" style="stroke:#2196F3;stroke-width:1.0416666666666667;"/><line style="stroke:#2196F3;stroke-width:1.5625;" x1="394.7917" x2="394.7917" y1="362.3047" y2="383.138"/><polygon fill="#2196F3" points="390.625,372.7214,394.7917,383.138,398.9583,372.7214,394.7917,376.888" style="stroke:#2196F3;stroke-width:1.0416666666666667;"/><line style="stroke:#2196F3;stroke-width:1.5625;" x1="394.7917" x2="394.7917" y1="453.9063" y2="474.7396"/><polygon fill="#2196F3" points="390.625,464.3229,394.7917,474.7396,398.9583,464.3229,394.7917,468.4896" style="stroke:#2196F3;stroke-width:1.0416666666666667;"/><line style="stroke:#2196F3;stroke-width:1.5625;" x1="394.7917" x2="394.7917" y1="545.5078" y2="566.3411"/><polygon fill="#2196F3" points="390.625,555.9245,394.7917,566.3411,398.9583,555.9245,394.7917,560.0911" style="stroke:#2196F3;stroke-width:1.0416666666666667;"/><line style="stroke:#2196F3;stroke-width:1.5625;" x1="394.7917" x2="394.7917" y1="637.1094" y2="660.0098"/><polygon fill="#2196F3" points="390.625,649.5931,394.7917,660.0098,398.9583,649.5931,394.7917,653.7598" style="stroke:#2196F3;stroke-width:1.0416666666666667;"/><line style="stroke:#2196F3;stroke-width:1.5625;" x1="394.7917" x2="394.7917" y1="730.778" y2="751.6113"/><polygon fill="#2196F3" points="390.625,741.1947,394.7917,751.6113,398.9583,741.1947,394.7917,745.3613" style="stroke:#2196F3;stroke-width:1.0416666666666667;"/><!--MD5=[5caadae888f51395b4fe8dd62307a5a4]
+@startuml
+partition "Detection function" {
+ :Exploratory analysis;
+ :binning and\ntruncation;
+ :customise Results Browser;
+ note left: QAIC, c-hat, GOF Chi2/df, P, P CV
+ :candidate model set;
+ note left: Max 3 parameters
+ :fit most complex\nfor each key;
+ :record GOF Chi2/df\nof complex;
+ :fit all\ncandidate models;
+ note left: input GOF Chi2/df\nin all models\nwith same key
+ :choose key model\nwith smallest QAIC;
+ :compare winning models\nfrom all keys;
+ note left: use GOF Chi2/df to select
+}
+@enduml
+
+PlantUML version 1.2022.2beta1(Unknown compile time)
+(GPL source distribution)
+Java Runtime: Java(TM) SE Runtime Environment
+JVM: Java HotSpot(TM) 64-Bit Server VM
+Default Encoding: UTF-8
+Language: en
+Country: US
+--></g></svg><!--MD5=[5fa7deda9de74b4edc56b6d378ab2aad]
+entity density--><svg x="1234.375" y="99.4792"><defs><filter height="300%" id="f1u1uzhnzf4jel" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="2.0833333333333335"/><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/><feOffset dx="4.166666666666667" dy="4.166666666666667" in="blurOut2" result="blurOut3"/><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/></filter><linearGradient id="g1u1uzhnzf4jel0" x1="50%" x2="50%" y1="0%" y2="100%"><stop offset="0%" stop-color="#4DABF5"/><stop offset="100%" stop-color="#2196F3"/></linearGradient><linearGradient id="g1u1uzhnzf4jel1" x1="50%" x2="50%" y1="0%" y2="100%"><stop offset="0%" stop-color="#B052C0"/><stop offset="100%" stop-color="#9C27B0"/></linearGradient><linearGradient id="g1u1uzhnzf4jel2" x1="50%" x2="50%" y1="0%" y2="100%"><stop offset="0%" stop-color="#FFFFFF"/><stop offset="100%" stop-color="#FFFFFF"/></linearGradient></defs><g transform="scale(1.0417,1.0417)" ><rect fill="#00000000" style="width:462px;height:692px;background:#00000000;" /> <rect filter="url(#f1u1uzhnzf4jel)" height="664.209" rx="4.1667" ry="4.1667" style="stroke:#2196F3;stroke-width:2.0833333333333335;fill:none;" width="433.3333" x="11.4583" y="11.4583"/><path d="M157.2917,11.4583 L157.2917,39.5508 L146.875,49.9674 L11.4583,49.9674 " fill="none" style="stroke:#2196F3;stroke-width:2.0833333333333335;"/><text fill="#2196F3" font-family="Verdana" font-size="12.5" lengthAdjust="spacing" textLength="114.5833" x="25" y="34.5194">density estimation</text><rect fill="url(#g1u1uzhnzf4jel0)" filter="url(#f1u1uzhnzf4jel)" height="56.2174" rx="13.0208" ry="13.0208" style="stroke:#2196F3;stroke-width:1.5625;" width="141.6667" x="57.2917" y="60.3841"/><text fill="#FFFFFF" font-family="Verdana" font-size="12.5" lengthAdjust="spacing" textLength="100" x="78.125" y="92.8202">Selected model</text><path d="M255.2083,142.6432 L255.2083,161.377 L234.375,165.5436 L255.2083,169.7103 L255.2083,188.444 A0,0 0 0 0 255.2083,188.444 L434.375,188.444 A0,0 0 0 0 434.375,188.444 L434.375,153.0599 L423.9583,142.6432 L255.2083,142.6432 A0,0 0 0 0 255.2083,142.6432 " fill="url(#g1u1uzhnzf4jel1)" filter="url(#f1u1uzhnzf4jel)" style="stroke:#9C27B0;stroke-width:1.0416666666666667;"/><path d="M423.9583,142.6432 L423.9583,153.0599 L434.375,153.0599 L423.9583,142.6432 " fill="url(#g1u1uzhnzf4jel1)" style="stroke:#9C27B0;stroke-width:1.0416666666666667;"/><text fill="#FFFFFF" font-family="Verdana" font-size="12.5" lengthAdjust="spacing" textLength="136.4583" x="271.875" y="169.871">D, D LCL, D UCL, D CV</text><rect fill="url(#g1u1uzhnzf4jel0)" filter="url(#f1u1uzhnzf4jel)" height="56.2174" rx="13.0208" ry="13.0208" style="stroke:#2196F3;stroke-width:1.5625;" width="212.5" x="21.875" y="137.4349"/><text fill="#FFFFFF" font-family="Verdana" font-size="12.5" lengthAdjust="spacing" textLength="170.8333" x="42.7083" y="169.871">customise Results Browser</text><rect fill="url(#g1u1uzhnzf4jel0)" filter="url(#f1u1uzhnzf4jel)" height="56.2174" rx="13.0208" ry="13.0208" style="stroke:#2196F3;stroke-width:1.5625;" width="153.125" x="51.5625" y="214.4857"/><text fill="#FFFFFF" font-family="Verdana" font-size="12.5" lengthAdjust="spacing" textLength="111.4583" x="72.3958" y="246.9218">estimate variance</text><rect fill="url(#g1u1uzhnzf4jel0)" filter="url(#f1u1uzhnzf4jel)" height="70.7682" rx="13.0208" ry="13.0208" style="stroke:#2196F3;stroke-width:1.5625;" width="169.7917" x="43.2292" y="291.5365"/><text fill="#FFFFFF" font-family="Verdana" font-size="12.5" lengthAdjust="spacing" textLength="61.4583" x="64.0625" y="323.9726">bootstrap</text><text fill="#FFFFFF" font-family="Verdana" font-size="12.5" lengthAdjust="spacing" textLength="128.125" x="64.0625" y="338.5234">resampling stations)</text><rect fill="url(#g1u1uzhnzf4jel0)" filter="url(#f1u1uzhnzf4jel)" height="56.2174" rx="13.0208" ry="13.0208" style="stroke:#2196F3;stroke-width:1.5625;" width="164.5833" x="45.8333" y="454.9642"/><text fill="#FFFFFF" font-family="Verdana" font-size="12.5" lengthAdjust="spacing" textLength="122.9167" x="66.6667" y="487.4003">bootstrap multiplier</text><polygon fill="url(#g1u1uzhnzf4jel2)" filter="url(#f1u1uzhnzf4jel)" points="61.9792,383.138,194.2708,383.138,206.7708,400.8301,194.2708,418.5221,61.9792,418.5221,49.4792,400.8301,61.9792,383.138" style="stroke:#CCCCCC;stroke-width:1.5625;"/><text fill="#222222" font-family="Verdana" font-size="12.5" lengthAdjust="spacing" textLength="22.9167" x="142.7083" y="440.5416">yes</text><text fill="#222222" font-family="Verdana" font-size="12.5" lengthAdjust="spacing" textLength="111.4583" x="72.3958" y="405.1575">activity multiplier?</text><polygon fill="url(#g1u1uzhnzf4jel2)" filter="url(#f1u1uzhnzf4jel)" points="128.125,532.015,140.625,544.515,128.125,557.015,115.625,544.515,128.125,532.015" style="stroke:#CCCCCC;stroke-width:1.5625;"/><rect fill="url(#g1u1uzhnzf4jel0)" filter="url(#f1u1uzhnzf4jel)" height="85.319" rx="13.0208" ry="13.0208" style="stroke:#2196F3;stroke-width:1.5625;" width="153.125" x="51.5625" y="577.8483"/><text fill="#FFFFFF" font-family="Verdana" font-size="12.5" lengthAdjust="spacing" textLength="39.5833" x="72.3958" y="610.2844">report</text><text fill="#FFFFFF" font-family="Verdana" font-size="12.5" lengthAdjust="spacing" textLength="58.3333" x="72.3958" y="624.8352">point and</text><text fill="#FFFFFF" font-family="Verdana" font-size="12.5" lengthAdjust="spacing" textLength="111.4583" x="72.3958" y="639.386">interval estimates</text><line style="stroke:#2196F3;stroke-width:1.5625;" x1="128.125" x2="128.125" y1="116.6016" y2="137.4349"/><polygon fill="#2196F3" points="123.9583,127.0182,128.125,137.4349,132.2917,127.0182,128.125,131.1849" style="stroke:#2196F3;stroke-width:1.0416666666666667;"/><line style="stroke:#2196F3;stroke-width:1.5625;" x1="128.125" x2="128.125" y1="193.6523" y2="214.4857"/><polygon fill="#2196F3" points="123.9583,204.069,128.125,214.4857,132.2917,204.069,128.125,208.2357" style="stroke:#2196F3;stroke-width:1.0416666666666667;"/><line style="stroke:#2196F3;stroke-width:1.5625;" x1="128.125" x2="128.125" y1="270.7031" y2="291.5365"/><polygon fill="#2196F3" points="123.9583,281.1198,128.125,291.5365,132.2917,281.1198,128.125,285.2865" style="stroke:#2196F3;stroke-width:1.0416666666666667;"/><line style="stroke:#2196F3;stroke-width:1.5625;" x1="128.125" x2="128.125" y1="418.5221" y2="454.9642"/><polygon fill="#2196F3" points="123.9583,444.5475,128.125,454.9642,132.2917,444.5475,128.125,448.7142" style="stroke:#2196F3;stroke-width:1.0416666666666667;"/><line style="stroke:#2196F3;stroke-width:1.5625;" x1="206.7708" x2="220.8333" y1="400.8301" y2="400.8301"/><polygon fill="#2196F3" points="216.6667,480.4769,220.8333,490.8936,225,480.4769,220.8333,484.6436" style="stroke:#2196F3;stroke-width:1.5625;"/><line style="stroke:#2196F3;stroke-width:1.5625;" x1="220.8333" x2="220.8333" y1="400.8301" y2="544.515"/><line style="stroke:#2196F3;stroke-width:1.5625;" x1="220.8333" x2="140.625" y1="544.515" y2="544.515"/><polygon fill="#2196F3" points="151.0417,540.3483,140.625,544.515,151.0417,548.6816,146.875,544.515" style="stroke:#2196F3;stroke-width:1.0416666666666667;"/><line style="stroke:#2196F3;stroke-width:1.5625;" x1="128.125" x2="128.125" y1="511.1816" y2="532.015"/><polygon fill="#2196F3" points="123.9583,521.5983,128.125,532.015,132.2917,521.5983,128.125,525.765" style="stroke:#2196F3;stroke-width:1.0416666666666667;"/><line style="stroke:#2196F3;stroke-width:1.5625;" x1="128.125" x2="128.125" y1="362.3047" y2="383.138"/><polygon fill="#2196F3" points="123.9583,372.7214,128.125,383.138,132.2917,372.7214,128.125,376.888" style="stroke:#2196F3;stroke-width:1.0416666666666667;"/><line style="stroke:#2196F3;stroke-width:1.5625;" x1="128.125" x2="128.125" y1="557.015" y2="577.8483"/><polygon fill="#2196F3" points="123.9583,567.4316,128.125,577.8483,132.2917,567.4316,128.125,571.5983" style="stroke:#2196F3;stroke-width:1.0416666666666667;"/><!--MD5=[1de1cd46b49c5739731567b2d0aa1b9b]
+@startuml
+partition "density estimation" {
+ :Selected model;
+ :customise Results Browser;
+ note right: D, D LCL, D UCL, D CV
+ :estimate variance;
+ :bootstrap\nresampling stations);
+ if (activity multiplier?) then (yes)
+   :bootstrap multiplier;
+ endif
+ :report\npoint and\ninterval estimates;
+}
+@enduml
+
+PlantUML version 1.2022.2beta1(Unknown compile time)
+(GPL source distribution)
+Java Runtime: Java(TM) SE Runtime Environment
+JVM: Java HotSpot(TM) 64-Bit Server VM
+Default Encoding: UTF-8
+Language: en
+Country: US
+--></g></svg><!--MD5=[1e47db18427bc668be47d7c2b50515d7]
+link prior to detection--><path codeLine="52" d="M497.2573,459.8958 C515.9198,459.8958 534.8604,459.8958 553.7854,459.8958 " fill="none" id="prior-to-detection" style="stroke:#2196F3;stroke-width:3.125;"/><polygon fill="#2196F3" points="559.1219,459.8958,549.7469,455.7292,553.9135,459.8958,549.7469,464.0625,559.1219,459.8958" style="stroke:#2196F3;stroke-width:3.125;"/><!--MD5=[b425e61360d5d9200b263404e68df054]
+link detection to density--><path codeLine="53" d="M1151.2813,459.8958 C1170.2708,459.8958 1189.3125,459.8958 1208.1458,459.8958 " fill="none" id="detection-to-density" style="stroke:#2196F3;stroke-width:3.125;"/><polygon fill="#2196F3" points="1213.4479,459.8958,1204.0729,455.7292,1208.2396,459.8958,1204.0729,464.0625,1213.4479,459.8958" style="stroke:#2196F3;stroke-width:3.125;"/><!--MD5=[4221ce2d575874079795d328c94002db]
+@startuml
+!theme materia
+left to right direction
+label prior [
+{{
+partition "Before Distance software" {
+:image processing;
+if (diurnal filtering?) then (peak activity)
+	:only detections\npeak activity;
+else (all camera\nhours)
+	:point and SE activity multiplier;
+	if (bootstraps?) then (yes)
+	  :bootstrap replicates;
+	endif  
+endif
+}
+}}
+]
+label detection [
+{{
+partition "Detection function" {
+ :Exploratory analysis;
+ :binning and\ntruncation;
+ :customise Results Browser;
+ note left: QAIC, c-hat, GOF Chi2/df, P, P CV
+ :candidate model set;
+ note left: Max 3 parameters
+ :fit most complex\nfor each key;
+ :record GOF Chi2/df\nof complex;
+ :fit all\ncandidate models;
+ note left: input GOF Chi2/df\nin all models\nwith same key
+ :choose key model\nwith smallest QAIC;
+ :compare winning models\nfrom all keys;
+ note left: use GOF Chi2/df to select
+}
+}}
+]
+label density [
+{{
+partition "density estimation" {
+ :Selected model;
+ :customise Results Browser;
+ note right: D, D LCL, D UCL, D CV
+ :estimate variance;
+ :bootstrap\nresampling stations);
+ if (activity multiplier?) then (yes)
+   :bootstrap multiplier;
+ endif
+ :report\npoint and\ninterval estimates;
+}
+}}
+]
+prior - -> detection
+detection - -> density
+@enduml
+
+@startuml
+
+
+
+skinparam backgroundColor transparent
+skinparam useBetaStyle false
+
+
+
+
+
+
+<style>
+  root {
+    BackgroundColor transparent
+    FontColor #FFF
+    HyperLinkColor #fd7e14
+    LineColor #1a78c2
+    LineThickness 1
+    Margin 10
+    Padding 6
+    Shadowing 0.0
+  }
+  node {
+   Padding 15
+   roundcorner 20
+   BackgroundColor #2196F3-#1a78c2
+  }
+  caption {
+    LineThickness 0
+  }
+  footer {
+    LineThickness 0
+  }
+  groupHeader {
+    BackgroundColor #fff
+    FontColor #9C27B0
+    FontStyle bold
+  }
+  header {
+    LineThickness 0
+  }
+  referenceHeader {
+    BackgroundColor transparent
+    FontColor #222
+    FontStyle bold
+  }
+  separator {
+    BackgroundColor #222
+    FontColor transparent
+    FontStyle bold
+  }
+  title {
+	FontSize 20
+	BorderRoundCorner            8
+	BorderThickness 	         1
+	BackgroundColor  #fff-#fff
+	FontColor #2196F3
+	BorderColor #fff
+  }
+  nwdiagDiagram {
+	network {
+			FontColor #FFF
+	BorderColor #2196F3
+	BackgroundColor #4dabf5-#2196F3    
+		LineColor #2196F3
+		LineThickness 1.0
+		FontColor #1a78c2
+	}
+	server {
+			FontColor #FFF
+	BorderColor #2196F3
+	BackgroundColor #4dabf5-#2196F3
+	}
+	arrow {
+		FontColor #1a78c2
+		LineColor #1a78c2
+	}
+	group {
+		BackGroundColor #fff
+		LineColor $LIGHT_DARK
+		LineThickness 2.0
+		Margin 5
+		Padding 5
+	}
+  }
+  ganttDiagram {
+	task {
+			FontColor #FFF
+	BorderColor #2196F3
+	BackgroundColor #4dabf5-#2196F3
+		LineColor #2196F3
+		Margin 10
+		Padding 6
+	}
+	note {
+		FontColor #FFF
+		LineColor #7D1F8D
+		BackGroundColor #9C27B0
+	}
+	separator {
+		LineColor #fff
+		BackGroundColor #fff-#cccccc
+		FontColor #222
+	}
+	milestone {
+		FontColor #9C27B0
+		FontSize 16
+		FontStyle italic
+		BackGroundColor #fff
+		LineColor #cccccc
+	}
+	timeline {
+		BackgroundColor #fff
+		FontColor #222
+	}
+	closed {
+		BackgroundColor #CC7A00
+		FontColor #FFF
+	}
+  }
+</style>
+skinparam defaultFontName       "Verdana"
+skinparam defaultFontSize       12
+skinparam dpi                   100
+skinparam shadowing             true
+skinparam roundcorner           8
+skinparam ParticipantPadding    40
+skinparam BoxPadding            40
+skinparam Padding               10
+skinparam ArrowColor            #666
+skinparam stereotype {
+    CBackgroundColor #fff
+    CBorderColor #cccccc
+    ABackgroundColor #70bf73
+    ABorderColor #3D8C40
+    IBackgroundColor #B7161C
+    IBorderColor #b7161c
+    EBackgroundColor #ffad33
+    EBorderColor #CC7A00
+    NBackgroundColor #b052c0
+    NBorderColor #7D1F8D
+}
+skinparam title {
+	FontColor	                 #2196F3
+	BorderColor	                 #cccccc
+	FontSize	    	         20
+	BorderRoundCorner            8
+	BorderThickness 	         1
+	BackgroundColor              #fff-#fff
+}
+
+skinparam legend {
+	BackgroundColor #fff
+	BorderColor #cccccc
+	FontColor #222
+}
+
+skinparam swimlane {
+	BorderColor #9C27B0
+	BorderThickness 2
+	TitleBackgroundColor  #fff-#fff
+	TitleFontColor #2196F3
+}
+
+
+skinparam activity {
+		FontColor #FFF
+	BorderColor #2196F3
+	BackgroundColor #4dabf5-#2196F3
+	BarColor #4CAF50
+	StartColor #9C27B0
+	EndColor #9C27B0
+	DiamondBackgroundColor #FFF-#fff
+  	DiamondBorderColor #cccccc
+	DiamondFontColor #222
+}
+
+
+skinparam participant {
+		FontColor #FFF
+	BorderColor #2196F3
+	BackgroundColor #4dabf5-#2196F3
+	ParticipantBorderThickness 2
+}
+
+
+skinparam actor {
+		FontColor #FFF
+	BorderColor #2196F3
+	BackgroundColor #4dabf5-#2196F3
+	FontColor #222
+}
+
+
+skinparam arrow {
+	Thickness 3
+	Color #2196F3
+	FontColor #222
+}
+
+
+skinparam sequence {
+	BorderColor #2196F3
+	TitleFontColor #2196F3
+	BackgroundColor transparent
+	StartColor #2196F3
+	EndColor #2196F3
+	BoxBackgroundColor #fff
+	BoxBorderColor #666
+	BoxFontColor #222
+	DelayFontColor #222
+	LifeLineBorderColor #cccccc
+	LifeLineBorderThickness 2
+	LifeLineBackgroundColor #fff
+	GroupBorderColor #666
+	GroupFontColor #222
+	GroupHeaderFontColor #9C27B0
+	DividerBackgroundColor #FFF-#fff
+    DividerBorderColor #666
+    DividerBorderThickness 2
+    DividerFontColor #222
+	ReferenceBackgroundColor transparent
+	ReferenceBorderColor #666
+	ReferenceFontColor #222
+	ReferenceHeaderFontColor #9C27B0
+	StereotypeFontColor #FFF
+}
+
+
+skinparam partition {
+	BorderColor #2196F3
+	FontColor #2196F3
+	BackgroundColor transparent
+}
+
+
+skinparam collections {
+		FontColor #FFF
+	BorderColor #2196F3
+	BackgroundColor #4dabf5-#2196F3
+}
+
+
+skinparam control {
+		FontColor #FFF
+	BorderColor #2196F3
+	BackgroundColor #4dabf5-#2196F3
+	FontColor #222
+}
+
+
+skinparam entity {
+		FontColor #FFF
+	BorderColor #2196F3
+	BackgroundColor #4dabf5-#2196F3
+	FontColor #222
+}
+
+
+skinparam boundary {
+		FontColor #FFF
+	BorderColor #2196F3
+	BackgroundColor #4dabf5-#2196F3
+	FontColor #222
+}
+
+
+skinparam agent {
+	BackgroundColor #orange
+	BorderColor #999999
+	FontColor #333333
+}
+
+
+skinparam note {
+	BorderThickness 1
+	BackgroundColor #b052c0-#9C27B0
+	BorderColor #9C27B0
+	FontColor #FFF
+}
+
+
+skinparam artifact {
+	BackgroundColor #FFF-#fff
+	BorderColor #666
+	FontColor #666
+}
+
+
+skinparam component {
+		FontColor #FFF
+	BorderColor #2196F3
+	BackgroundColor #4dabf5-#2196F3
+}
+
+
+skinparam interface {
+	BackgroundColor  #B7161C
+	BorderColor  #e51c23
+	FontColor #222
+}
+
+
+skinparam storage {
+	BackgroundColor #ffad33-#ff9800
+  	BorderColor #ff9800
+	FontColor #FFF
+}
+
+
+skinparam node {
+	BackgroundColor #fff-#fff
+	BorderColor #222
+	FontColor #222
+}
+
+
+skinparam cloud {
+	BackgroundColor #F2FCFE-#eeeeee
+	BorderColor #F2FCFE
+	FontColor #222
+}
+
+
+skinparam database {
+		FontColor #FFF
+	BorderColor #2196F3
+	BackgroundColor #4dabf5-#2196F3
+	FontColor #222
+}
+
+
+skinparam class {
+		FontColor #FFF
+	BorderColor #2196F3
+	BackgroundColor #4dabf5-#2196F3
+	HeaderBackgroundColor #2196F3-#1a78c2
+	StereotypeFontColor #222
+	BorderThickness 1
+	AttributeFontColor #fff
+	AttributeFontSize 11
+}
+
+
+skinparam object {
+		FontColor #FFF
+	BorderColor #2196F3
+	BackgroundColor #4dabf5-#2196F3
+	StereotypeFontColor #222
+	BorderThickness 1
+	AttributeFontColor #222
+	AttributeFontSize 11
+}
+
+
+skinparam usecase {
+		FontColor #FFF
+	BorderColor #2196F3
+	BackgroundColor #4dabf5-#2196F3
+	BorderThickness 2
+	StereotypeFontColor #2196F3
+}
+
+
+skinparam rectangle {
+	FontColor #2196F3
+	BackgroundColor #fff-#fff
+	BorderThickness 2
+	StereotypeFontColor #2196F3
+}
+
+
+skinparam package {
+		FontColor #FFF
+	BorderColor #2196F3
+	BackgroundColor #4dabf5-#2196F3
+	BackgroundColor #fff-#fff
+	BorderThickness 2
+}
+
+
+skinparam folder {
+	BackgroundColor #FFF-#fff
+  	BorderColor #ff9800
+	FontColor #ff9800
+	BorderThickness 2
+}
+
+
+skinparam frame {
+	BackgroundColor #FFF-#fff
+  	BorderColor #9C27B0
+	FontColor #9C27B0
+	BorderThickness 2
+}
+
+
+skinparam state {
+		FontColor #FFF
+	BorderColor #2196F3
+	BackgroundColor #4dabf5-#2196F3
+	BorderColor #1a78c2
+	StartColor #9C27B0
+	EndColor #9C27B0
+	AttributeFontColor #222
+	AttributeFontSize 11
+}
+
+
+skinparam queue {
+		FontColor #FFF
+	BorderColor #2196F3
+	BackgroundColor #4dabf5-#2196F3
+}
+
+
+skinparam card {
+	BackgroundColor #b052c0-#9C27B0
+	BorderColor #9C27B0
+	FontColor #FFF
+}
+
+
+skinparam file {
+	BackgroundColor #fff-#fff
+	BorderColor #666
+	FontColor #666
+
+}
+
+
+skinparam stack {
+		FontColor #FFF
+	BorderColor #2196F3
+	BackgroundColor #4dabf5-#2196F3
+}
+left to right direction
+label prior [
+{{
+partition "Before Distance software" {
+:image processing;
+if (diurnal filtering?) then (peak activity)
+	:only detections\npeak activity;
+else (all camera\nhours)
+	:point and SE activity multiplier;
+	if (bootstraps?) then (yes)
+	  :bootstrap replicates;
+	endif  
+endif
+}
+}}
+]
+label detection [
+{{
+partition "Detection function" {
+ :Exploratory analysis;
+ :binning and\ntruncation;
+ :customise Results Browser;
+ note left: QAIC, c-hat, GOF Chi2/df, P, P CV
+ :candidate model set;
+ note left: Max 3 parameters
+ :fit most complex\nfor each key;
+ :record GOF Chi2/df\nof complex;
+ :fit all\ncandidate models;
+ note left: input GOF Chi2/df\nin all models\nwith same key
+ :choose key model\nwith smallest QAIC;
+ :compare winning models\nfrom all keys;
+ note left: use GOF Chi2/df to select
+}
+}}
+]
+label density [
+{{
+partition "density estimation" {
+ :Selected model;
+ :customise Results Browser;
+ note right: D, D LCL, D UCL, D CV
+ :estimate variance;
+ :bootstrap\nresampling stations);
+ if (activity multiplier?) then (yes)
+   :bootstrap multiplier;
+ endif
+ :report\npoint and\ninterval estimates;
+}
+}}
+]
+prior - -> detection
+detection - -> density
+@enduml
+
+PlantUML version 1.2022.2beta1(Unknown compile time)
+(GPL source distribution)
+Java Runtime: Java(TM) SE Runtime Environment
+JVM: Java HotSpot(TM) 64-Bit Server VM
+Default Encoding: UTF-8
+Language: en
+Country: US
+--></g></svg>
