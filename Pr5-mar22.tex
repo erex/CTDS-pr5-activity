@@ -140,7 +140,7 @@ Upload a data file from your local computer to the cloud-based application (Fig.
 %\vspace{-25pt}
 %\end{wrapfigure}
 
-Uncertainty in the temporal availability multiplier is estimate by resampling the camera triggering times.  The smoothness of the kernel density model can be adjusted using the bandwidth argument (Fig. \ref{fig:sh3}).  We recommend keeping the bandwidth at the default value of "1".  Further details regarding calculation of the temporal availability multiplier can be found in \citet{activity_pkg}.
+Uncertainty in the temporal availability multiplier is estimate by resampling the camera triggering times.  The smoothness of the kernel density model can be adjusted using the bandwidth argument (Fig. \ref{fig:sh3}).  Simulations by \citet{rowcliffe_2014} suggests best performance with bandwidth of \textbf{1.5}.  Further details regarding calculation of the temporal availability multiplier can be found in \citet{activity_pkg}.  Create \textbf{500} replicates in this step for later use.
 
 
 \subsection{Adjust for camera hours of operation}
@@ -178,8 +178,6 @@ Both the layer and the field name must be specified before the input can take pl
 \vspace{-25pt}
 \end{wrapfigure}
 
-
-
 Once the bootstrap replicates have been imported, they will not be used in the uncertainty of density estimates until Distance for Windows is instructed to use bootstrap rather than analytical means of estimating multiplier uncertainty.  This dialogue takes place in the Variance tab shown in Fig. \ref{fig:i-boot}.
 
 \begin{wrapfigure}{l}{0.45\textwidth}
@@ -190,7 +188,7 @@ Once the bootstrap replicates have been imported, they will not be used in the u
 \vspace{-25pt}
 \end{wrapfigure}
 
-\begin{wrapfigure}{l}{0.35\textwidth}
+\begin{wrapfigure}{r}{0.35\textwidth}
 %\begin{figure}[H]
 \includegraphics[width=0.33\textwidth]{images/density-table.png}
 \caption{Density estimates from \citet{howeetal}.  Incorporating both multipliers would make your estimate comparable to that labelled \emph{Active daytime}. \label{fig:dentab}}
@@ -199,7 +197,7 @@ Once the bootstrap replicates have been imported, they will not be used in the u
 \end{wrapfigure}
 \vspace{.6in}
 
-By selecting the non-parameteric bootstrap (topmost check box, Fig. \ref{fig:i-boot}), the camera stations will be resampled with replacement (second-top check box, Fig. \ref{fig:i-boot}) to refit the detection function and estimate the encounter rate variance.  The third and fourth check boxes of Fig. \ref{fig:i-boot} ensure that the replicate estimates of the activity multiplier are also used to compute uncertainty in the density estimate.  If the last two check boxes of Fig. \ref{fig:i-boot} are not ticked, the activity multiplier will be assumed constant and uncertainty in the multiplier will not be propagated through to uncertainty in the density estimate.
+By selecting the non-parameteric bootstrap (topmost check box, Fig. \ref{fig:i-boot}), the camera stations will be resampled with replacement (second-top check box, Fig. \ref{fig:i-boot}) to refit the detection function and estimate the encounter rate variance.  The third and fourth check boxes of Fig. \ref{fig:i-boot} ensure that the replicate estimates of the activity multiplier are also used to compute uncertainty in the density estimate. Note the number of replicates requested here \textbf{must match} the number of bootstrap replicates created with the Shiny app.  If the last two check boxes of Fig. \ref{fig:i-boot} are not ticked, the activity multiplier will be assumed constant and uncertainty in the multiplier will not be propagated through to uncertainty in the density estimate.
 
 \section{Questions about this analysis}
 
@@ -208,15 +206,15 @@ By selecting the non-parameteric bootstrap (topmost check box, Fig. \ref{fig:i-b
 	\item How does the estimate of density and its precision compare with the results presented in \citet{howeetal} (Fig. \ref{fig:dentab})?
 \ifsolutionthenelse{%
 	\begin{tcolorbox}[colback=green!5!white, colframe=green!60!black, title=Model selection choices]
-	\citet{howeetal} used the hazard rate key function without adjustments as basis for inference. Because we used a different candidate model set, our density estimate of 18.4 duikers $\cdot \textsf{hectare}^{-1}$ differs from the published estimate of 16.5 duikers $\cdot \textsf{hectare}^{-1}$.  The coefficients of variation for the two density estimates are very similar (0.28 in this analysis, 0.27 in the published study).
+	\citet{howeetal} used the hazard rate key function without adjustments as basis for inference. Because we used a different candidate model set (and enhanced the computation of the activity multiplier), our density estimate of 18.4 duikers $\cdot \textsf{hectare}^{-1}$ differs from the published estimate of 16.5 duikers $\cdot \textsf{hectare}^{-1}$.  The coefficients of variation for the two density estimates are very similar (0.28 in this analysis, 0.27 in the published study).
 \end{tcolorbox}
 }
 {
 }
 	\item What is the consequence of using bootstrap estimates of uncertainty compared to analytical measures of uncertainty?
 \ifsolutionthenelse{%
-	\begin{tcolorbox}[colback=green!5!white, colframe=green!60!black, title=Differences in $\hat{P}$]
-		Confidence interval bounds widen from (10.4, 32.5) analytical to (8.0, 35.8) bootstrap. Your bootstrap confidence interval bounds will differ from these because of the stochasticity of the bootstrap.
+	\begin{tcolorbox}[colback=green!5!white, colframe=green!60!black, title=Differences in confidence interval bounds on $\hat{D}$]
+		Confidence interval bounds widen from (10.4, 32.5) analytical to (8.4, 38.8) bootstrap. Your bootstrap confidence interval bounds will differ from these because of the stochasticity of the bootstrap.
 		\end{tcolorbox}
 }
 {

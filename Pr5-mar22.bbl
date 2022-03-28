@@ -1,0 +1,191 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.2 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated as
+% required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+\datalist[entry]{nyt/global//global/global}
+  \entry{howeetal}{article}{}
+    \name{author}{4}{}{%
+      {{hash=HEJ}{%
+         family={Howe},
+         familyi={H\bibinitperiod},
+         given={Eric\bibnamedelima J.},
+         giveni={E\bibinitperiod\bibinitdelim J\bibinitperiod},
+      }}%
+      {{hash=BST}{%
+         family={Buckland},
+         familyi={B\bibinitperiod},
+         given={Stephen\bibnamedelima T.},
+         giveni={S\bibinitperiod\bibinitdelim T\bibinitperiod},
+      }}%
+      {{hash=DEML}{%
+         family={Despr{\'e}s-Einspenner},
+         familyi={D\bibinithyphendelim E\bibinitperiod},
+         given={Marie-Lyne},
+         giveni={M\bibinithyphendelim L\bibinitperiod},
+      }}%
+      {{hash=KHS}{%
+         family={K{\"u}hl},
+         familyi={K\bibinitperiod},
+         given={Hjalmar\bibnamedelima S.},
+         giveni={H\bibinitperiod\bibinitdelim S\bibinitperiod},
+      }}%
+    }
+    \keyw{animal abundance, camera trapping, density, distance sampling,
+  Maxwell's duiker}
+    \strng{namehash}{HEJ+1}
+    \strng{fullhash}{HEJBSTDEMLKHS1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2017}
+    \field{labeldatesource}{}
+    \field{sortinit}{H}
+    \field{sortinithash}{H}
+    \field{abstract}{%
+    Summary Reliable estimates of animal density and abundance are essential
+  for effective wildlife conservation and management. Camera trapping has
+  proven efficient for sampling multiple species, but statistical estimators of
+  density from camera trapping data for species that cannot be individually
+  identified are still in development. We extend point-transect methods for
+  estimating animal density to accommodate data from camera traps, allowing
+  researchers to exploit existing distance sampling theory and software for
+  designing studies and analysing data. We tested it by simulation, and used it
+  to estimate densities of Maxwell's duikers (Philantomba maxwellii) in Taï
+  National Park, Côte d'Ivoire. Densities estimated from simulated data were
+  unbiased when we assumed animals were not available for detection during long
+  periods of rest. Estimated duiker densities were higher than recent estimates
+  from line transect surveys, which are believed to underestimate densities of
+  forest ungulates. We expect these methods to provide an effective means to
+  estimate animal density from camera trapping data and to be applicable in a
+  variety of settings.%
+    }
+    \verb{doi}
+    \verb 10.1111/2041-210X.12790
+    \endverb
+    \field{number}{11}
+    \field{pages}{1558\bibrangedash 1565}
+    \field{title}{Distance sampling with camera traps}
+    \field{volume}{8}
+    \field{journaltitle}{Methods in Ecology and Evolution}
+    \field{year}{2017}
+  \endentry
+
+  \entry{activity_pkg}{manual}{}
+    \name{author}{1}{}{%
+      {{hash=RJM}{%
+         family={Rowcliffe},
+         familyi={R\bibinitperiod},
+         given={J.\bibnamedelima Marcus},
+         giveni={J\bibinitperiod\bibinitdelim M\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{RJM1}
+    \strng{fullhash}{RJM1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2021}
+    \field{labeldatesource}{}
+    \field{sortinit}{R}
+    \field{sortinithash}{R}
+    \field{note}{R package version 1.3.1}
+    \field{title}{activity: Animal Activity Statistics}
+    \verb{url}
+    \verb https://CRAN.R-project.org/package=activity
+    \endverb
+    \field{year}{2021}
+  \endentry
+
+  \entry{rowcliffe_2014}{article}{}
+    \name{author}{5}{}{%
+      {{hash=RJM}{%
+         family={Rowcliffe},
+         familyi={R\bibinitperiod},
+         given={J.\bibnamedelima Marcus},
+         giveni={J\bibinitperiod\bibinitdelim M\bibinitperiod},
+      }}%
+      {{hash=KR}{%
+         family={Kays},
+         familyi={K\bibinitperiod},
+         given={Roland},
+         giveni={R\bibinitperiod},
+      }}%
+      {{hash=KB}{%
+         family={Kranstauber},
+         familyi={K\bibinitperiod},
+         given={Bart},
+         giveni={B\bibinitperiod},
+      }}%
+      {{hash=CC}{%
+         family={Carbone},
+         familyi={C\bibinitperiod},
+         given={Chris},
+         giveni={C\bibinitperiod},
+      }}%
+      {{hash=JPA}{%
+         family={Jansen},
+         familyi={J\bibinitperiod},
+         given={Patrick\bibnamedelima A.},
+         giveni={P\bibinitperiod\bibinitdelim A\bibinitperiod},
+      }}%
+    }
+    \list{language}{1}{%
+      {en}%
+    }
+    \keyw{activity level,activity time,circular kernel,proportion active,remote
+  sensors,Von Mises distribution,weighted kernel}
+    \strng{namehash}{RJM+1}
+    \strng{fullhash}{RJMKRKBCCJPA1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2014}
+    \field{labeldatesource}{}
+    \field{sortinit}{R}
+    \field{sortinithash}{R}
+    \field{abstract}{%
+    Activity level (the proportion of time that animals spend active) is a
+  behavioural and ecological metric that can provide an indicator of
+  energetics, foraging effort and exposure to risk. However, activity level is
+  poorly known for free-living animals because it is difficult to quantify
+  activity in the field in a consistent, cost-effective and non-invasive way.
+  This article presents a new method to estimate activity level with
+  time-of-detection data from camera traps (or more generally any remote
+  sensors), fitting a flexible circular distribution to these data to describe
+  the underlying activity schedule, and calculating overall proportion of time
+  active from this. Using simulations and a case study for a range of small- to
+  medium-sized mammal species, we find that activity level can reliably be
+  estimated using the new method. The method depends on the key assumption that
+  all individuals in the sampled population are active at the peak of the daily
+  activity cycle. We provide theoretical and empirical evidence suggesting that
+  this assumption is likely to be met for many species, but may be less likely
+  met in large predators, or in high-latitude winters. Further research is
+  needed to establish stronger evidence on the validity of this assumption in
+  specific cases; however, the approach has the potential to provide an
+  effective, non-invasive alternative to existing methods for quantifying
+  population activity levels.%
+    }
+    \verb{doi}
+    \verb 10.1111/2041-210X.12278
+    \endverb
+    \field{issn}{2041-210X}
+    \field{number}{11}
+    \field{pages}{1170\bibrangedash 1179}
+    \field{title}{Quantifying levels of animal activity using camera trap data}
+    \field{volume}{5}
+    \field{journaltitle}{Methods in Ecology and Evolution}
+    \field{year}{2014}
+  \endentry
+\enddatalist
+\endinput

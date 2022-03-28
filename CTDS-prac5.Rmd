@@ -114,7 +114,7 @@ We should perform a complete analysis, fitting a suite of detection function mod
 ```{r dayhr0, eval=solution}
 daytime.hr0 <- ds(daytime, transect = "point", key="hr", adjustment = NULL,
                   cutpoints = mybreaks, truncation = trunc.list,
-                  convert.units=conversion)
+                  convert_units=conversion)
 plot(daytime.hr0, pdf=TRUE)
 ```
 
@@ -202,7 +202,7 @@ Just as with `dht2` there are arguments for the `model`, `flatfile`,  `sample_fr
 daytime.boot.hr <- bootdht(model=daytime.hr0, flatfile=daytime,
                           resample_transects = TRUE, nboot=500, cores = 3,
                           summary_fun=mysummary, sample_fraction = field.of.view,
-                          convert.units = conversion, multipliers=mult)
+                          convert_units = conversion, multipliers=mult)
 ```
 
 Confidence limits computed via the percentile method of the bootstrap.
